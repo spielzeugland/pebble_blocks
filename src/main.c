@@ -77,10 +77,12 @@ static void my_layer_draw(Layer *layer, GContext *ctx) {
 	int d3 = tick_time->tm_min / 10;
 	int d4 = tick_time->tm_min % 10;
 	
-	draw_number(layer, ctx, config, d1, 40, 30, draw_niceblock);
-	draw_number(layer, ctx, config, d2, 80, 30, draw_niceblock);
-	draw_number(layer, ctx, config, d3, 40, 90, draw_niceblock);
-	draw_number(layer, ctx, config, d4, 80, 90, draw_niceblock);
+	DrawRoutine drawRoutine = draw_plainblock;
+	
+	draw_number(layer, ctx, config, d1, 40, 30, drawRoutine);
+	draw_number(layer, ctx, config, d2, 80, 30, drawRoutine);
+	draw_number(layer, ctx, config, d3, 40, 90, drawRoutine);
+	draw_number(layer, ctx, config, d4, 80, 90, drawRoutine);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
