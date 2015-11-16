@@ -1,7 +1,16 @@
 {
-    "appKeys": {},
+    "appKeys": {
+        "BG_BLUE": 2,
+        "BG_GREEN": 1,
+        "BG_RED": 0,
+        "BLOCK_SIZE": 7,
+        "BLOCK_STYLE": 6,
+        "FG_BLUE": 5,
+        "FG_GREEN": 4,
+        "FG_RED": 3
+    },
     "capabilities": [
-        ""
+        "configurable"
     ],
     "companyName": "spielzeugland",
     "longName": "blocks",
